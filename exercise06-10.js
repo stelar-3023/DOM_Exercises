@@ -35,3 +35,12 @@ const checkInput = (event) => {
 document.getElementById("username").addEventListener("blur", checkInput);
 document.getElementById("password").addEventListener("blur", checkInput);
 document.getElementById("confirmPassword").addEventListener("blur", checkInput);
+
+document.getElementById("confirmPassword").addEventListener("blur", (event) => {
+  if (event.target.value !== document.getElementById("password").value) {
+    event.target.insertAdjacentHTML(
+      "afterend",
+      '<span class="text-danger">Passwords do not match</span>'
+    );
+  }
+});
