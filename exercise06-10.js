@@ -44,3 +44,18 @@ document.getElementById("confirmPassword").addEventListener("blur", (event) => {
     );
   }
 });
+
+const btn = document.querySelector("button");
+btn.setAttribute("disabled", "disabled");
+document
+  .getElementById("registrationForm")
+  .addEventListener("change", (event) => {
+    const formisFilled = Array.from(document.querySelectorAll("input")).every(
+      (input) => input.value
+    );
+    if (formisFilled) {
+      btn.removeAttribute("disabled");
+    } else {
+      btn.setAttribute("disabled", "disabled");
+    }
+  });
