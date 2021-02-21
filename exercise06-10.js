@@ -59,3 +59,13 @@ document
       btn.setAttribute("disabled", "disabled");
     }
   });
+
+const form = document.getElementById("registrationForm");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const alert = document.createElement("div");
+  alert.classList.add("alert", "alert-success");
+  alert.innerText = "User registered successfully";
+  form.prepend(alert);
+})
