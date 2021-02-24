@@ -8,3 +8,10 @@ paragraph.innerHTML = paragraph.innerText
   )
   .join(" ");
 
+let message = "I said don't click here"
+
+function btnMessage() {
+  console.log(message)  
+}
+btnPress = document.getElementById("btn")
+btnPress.addEventListener("click", btnMessage)
